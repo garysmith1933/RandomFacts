@@ -10,7 +10,6 @@ function App() {
             try {
                 const response = await axios.get("http://localhost:8080/");
                 const data = response.data[0].fact;
-                console.log(data)
                 setFact(data)
             } catch (e) {
                 console.log(e)
@@ -23,7 +22,7 @@ function App() {
   return (
     <>
      <h1>This is your random fact of the day:</h1>
-        <p> {fact}</p>
+        <p>{fact}</p>
     </>
   )
 }
