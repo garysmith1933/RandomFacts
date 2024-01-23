@@ -9,7 +9,7 @@ function App() {
         const fetchFact = async () => {
             try {
                 const response = await axios.get("http://localhost:8080/");
-                const data = response.data;
+                const data = response.data[0].fact;
                 console.log(data)
                 setFact(data)
             } catch (e) {
